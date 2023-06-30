@@ -6,12 +6,10 @@ public class Main {
         // IntelliJ IDEA suggests fixing it.
         System.out.printf("Hello and welcome!");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        int[] gas = {1,2,3,4,5};
+        int[] cost = {3,4,5,1,2};
+        Question134 question134 = new Question134();
+        int result = question134.canCompleteCircuit(gas, cost);
+        System.out.println("result=" + result);
     }
 }
