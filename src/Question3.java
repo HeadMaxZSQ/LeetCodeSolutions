@@ -10,6 +10,7 @@ public class Question3 {
      */
 
     //【最优解】【滑动窗口+HashMap】
+    //时间复杂度O(N)，空间复杂度O(1)。
     public int lengthOfLongestSubstring(String s) {
         int left = 0;
         int right = 0;
