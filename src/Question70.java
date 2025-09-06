@@ -20,17 +20,16 @@ public class Question70 {
      * 空间复杂度：O(1)
      */
     public int climbStairs1(int n) {
-        //f(n) = f(n - 1) + f(n - 2)，
+        //递推公式：f(n) = f(n - 1) + f(n - 2)，
         // 声明三个变量分别记录：
         // p: f(n - 2)
         // q: f(n - 1)
         // r: f(n)
-        int p = 0, q = 0, r = 1;
-        //为了便于思考，循环index就不从0开始，直接考虑1到n级台阶
-        for (int i = 1; i <= n; ++i) {
-            p = q;
-            q = r;
-            r = p + q;
+        int p = 0, q = 1, r = 1;//这里变量的初始值不着急填，等写循环实现递推公式时再看怎样初始化能满足初次计算。
+        for (int i = 0; i < n; ++i) {
+            r = p + q;//1.实现递推公式
+            p = q;//2.f(n - 1)赋值给f(n - 2)，以备下一次运算
+            q = r;//3.f(n)赋值给f(n - 1)，以备下一次运算
         }
         return r;
     }
